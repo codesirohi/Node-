@@ -40,3 +40,21 @@ console.log(dataJSON)
  */
 
 /* console.log(dataBuffer.toString()) */
+
+const fs = require('fs')
+
+const dataBuffer = fs.readFileSync('1-json.json')
+
+const dataJSON = dataBuffer.toString()
+
+const parsed = JSON.parse(dataJSON);
+
+parsed.name = 'Shubham Singh'
+parsed.age = 23
+parsed.planet = 'Neptune'
+
+const userJSON = JSON.stringify(parsed);
+
+fs.writeFileSync('1-json.json', userJSON);
+
+console.log(userJSON)
