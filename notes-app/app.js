@@ -1,7 +1,6 @@
 const chalk = require('chalk')
 const getNotes = require('./notes.js')
+const yargs = require('yargs')
 
-const note = getNotes() 
-
-console.log(chalk.white.bggreen.bold('Success !'));
-console.log(chalk.white.bgred.bold('Faliure !'));
+console.log(process.argv)
+console.log(yargs.argv)
